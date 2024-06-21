@@ -1,0 +1,130 @@
+
+#install library 
+library(readxl)
+Survey_2309 <- read_excel("C:/Users/Admin/Desktop/Survey 2309.xlsx",
+col_types = c("text", "numeric", "text",
+"text", "numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"text", "text", "text", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "text", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "text", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "text", "text",
+"numeric", "numeric", "text"))
+View(Survey_2309)
+library(readxl)
+Survey_2309 <- read_excel("C:/Users/Admin/Desktop/Survey 2309.xlsx",
+col_types = c("text", "numeric", "text",
+"text", "numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"text", "text", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "text", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "text", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "text", "text", "numeric",
+"numeric", "text"))
+View(Survey_2309)
+summarize(age, gender)
+summary(age, gender)
+View(Survey_2309)
+summary(Survey_2309)
+install packages("factoextra")
+install.packages("foreign")
+install.packages("psych")
+library(GPArotation)
+install.packages("GPArotation")
+library(GPArotation)
+library(foreign)
+library(psych)
+View(Survey_2309)
+library(readxl)
+Survey_2309 <- read_excel("C:/Users/Admin/Desktop/Survey 2309.xlsx")
+View(Survey_2309)
+correlation <- cor(Survey_2309)
+install.packages("dplyr")
+Survey_2309 %>% mutate_if(is.character,as.numeric)
+library(readxl)
+Survey_2309 <- read_excel("C:/Users/Admin/Desktop/Survey 2309.xlsx",
+col_types = c("numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric", "numeric", "numeric",
+"numeric"))
+View(Survey_2309)
+correlation <- cor(data.us.only)
+correlation <- cor(Survey_2309)
+eigen.values <- eigen(correlation)
+eigen.values <- eigen(correlation)
+rotated <- fa(correlation, nfactors = 6, rotate = "oblimin", fm = "ml")
+data <- subset(Survey_2309, complete.cases(Survey_2309))
+rotated <- fa(data, nfactors = 6, rotate = "oblimin", fm = "ml")
+print(rotated, sort = T, cut = .30)
+rotated <- fa(data, nfactors = 7, rotate = "oblimin", fm = "ml")
+print(rotated, sort = T, cut = .30)
+View(rotated)
+View(data)
+regression<- lm(formula=INT2~PU2+PEU4+PB2+PI2+SI2,data=Survey_2309)
+View(regression)
+print regression
+print(regression)
+summary (regression)
+results<- tidy(regression)
+install.packages("broom")
+results<- tidy(regression)
+install.packages("kableExtra")
+results<-tidy(regression)
+install.packages("gtsummary")
+library(broom)
+results<-tidy(regression)
+View(results)
+library(gtsummary)
+tbl_regression(regression)
+results<-tbl_regression(
+regression,
+label = NULL,
+exponentiate = FALSE,
+include = everything(),
+show_single_row = NULL,
+conf.level = NULL,
+intercept = NULL,
+estimate_fun = NULL,
+pvalue_fun = NULL,
+tidy_fun = NULL,
+add_estimate_to_reference_rows = FALSE,
+conf.int = NULL,
+...
+)
+# Regression analysis 
+Regression <- lm(formula = INT2 ~ PU2 + PEU4 + PB2 + PI2 + SI2, data = Survey_2309) print(regression) 
+summary(regression)
+
+#Cronbach Alpha 
+PU_alpha <- compute_cronbach_alpha(PU_vars)
+PEOU_alpha <- compute_cronbach_alpha(PEOU_vars)
+SI_alpha <- compute_cronbach_alpha(SI_vars)
+PT_alpha <- compute_cronbach_alpha(PT_vars)
+PR_alpha <- compute_cronbach_alpha(PR_vars)
+IU_alpha <- compute_cronbach_alpha(IU_vars)
+#Result_Cronbach Alpha 
+alpha_results <- data.frame(
+Scale = c("Perceived Usefulness", "Perceived Ease of Use", "Social Influence", "Perceived Trust", "Perceived Risk", "Intention to Use"),
+Cronbach_Alpha = c(PU_alpha, PEOU_alpha, SI_alpha, PT_alpha, PR_alpha, IU_alpha)
++ )
+print(alpha_results)
+              	
+
+
+
+
